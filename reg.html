@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Регистрация</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/Group6.png" type="image/x-icon">
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <header class="picture"><img src="images/Group2.png" alt="logotipe"></header>
+    
+    <div class="buttons">
+        <a href="sign.html" class="button1">Вход</a>
+        <div class="terminator">
+            <p class="textterminator">Регистрация</p>
+        </div>
+    </div>
+    
+    <main class="textboxes">
+        <form action="profile.html" method="post" target="content">
+            <input class="textbox1" type="email" name="email" required placeholder="Email" maxlength="254" size="20" autocomplete="email">
+            <input class="textbox" type="password" name="password" required placeholder="Пароль" minlength="6" autocomplete="new-password">
+            <input class="textbox" type="text" name="nickname" required placeholder="Никнейм" autocomplete="username">
+            <input class="textbox" type="text" name="name" required placeholder="Имя пользователя">
+            
+            <label class="date1">Дата рождения
+                <input class="date" name="date" type="date" required>
+            </label>
+            
+            <fieldset class="radio-group">
+                <legend>Пол</legend>
+                <label>
+                    <input class="radio-label" type="radio" name="gender" value="female" required> Девчонка
+                </label>
+                <label>
+                    <input class="radio-label" type="radio" name="gender" value="male"> Парниша
+                </label>
+                <label>
+                    <input class="radio-label" type="radio" name="gender" value="secret"> Секрет
+                </label>
+            </fieldset>
+            
+            <label class="checkbox-label">
+                <input class="checkbox" type="checkbox" required> Согласен на обработку данных
+            </label>
+            <label class="checkbox-label">
+                <input class="checkbox" type="checkbox" required> Согласен с политикой конфиденциальности
+            </label>
+            
+            <button class="button" type="submit">Зарегистрироваться</button>
+        </form>
+    </main>
+</body>
+</html>
+   

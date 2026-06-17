@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Group6.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/pay.css">
+    <title>Оплата — Palitra</title>
+</head>
+<body>
+
+<header>
+    <div class="header-row">
+        <div class="logo-block">
+            <a href="index.html">
+                <img src="images/Group2.png" width="150px" height="60px" alt="logo">
+            </a>
+        </div>
+        <div class="right-group">
+            <a href="profile.html" class="profile-link">
+                <img src="images/аватарка.jpg" style="width:60px;height:60px;border-radius:100%;object-fit:cover;box-shadow:0 0px 6px rgb(218,218,218);">
+                <span class="profile-text">Профиль</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="wrapper">
+    <div class="payment-card">
+        <h1>Оплата подписки</h1>
+        <p class="amount">Palitra Premium — 97.83 руб / мес</p>
+
+        <div class="field">
+            <label>Номер карты</label>
+            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+        </div>
+        <div class="field">
+            <label>Имя держателя</label>
+            <input type="text" placeholder="IVAN IVANOV">
+        </div>
+        <div class="row-2">
+            <div class="field">
+                <label>Срок действия</label>
+                <input type="text" placeholder="MM / ГГ" maxlength="7">
+            </div>
+            <div class="field">
+                <label>CVV</label>
+                <input type="text" placeholder="•••" maxlength="3">
+            </div>
+        </div>
+
+        <button class="btn-pay" onclick="pay()">Оплатить</button>
+
+        <div class="success-msg" id="success">
+            <p>Оплата прошла успешно!</p>
+            <p class="sub">Перенаправление на главную страницу...</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Palitra | パレット</p>
+</footer>
+
+<script>
+function pay() {
+    localStorage.setItem('subscribed', 'true');
+    document.getElementById('success').style.display = 'block';
+    setTimeout(function() { location.href = 'index.html'; }, 2000);
+}
+</script>
+
+</body>
+</html>
